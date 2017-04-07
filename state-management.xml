@@ -50,7 +50,7 @@
     <cluster-provider>
         <id>zk-provider</id>
         <class>org.apache.nifi.controller.state.providers.zookeeper.ZooKeeperStateProvider</class>
-        <property name="Connect String">zookeeper-0:2181,zookeeper:2181,zookeeper:2181</property>
+        <property name="Connect String">zookeeper-0:2181,zookeeper-1:2181,zookeeper-2:2181</property>
         <property name="Root Node">/nifi</property>
         <property name="Session Timeout">10 seconds</property>
         <property name="Access Control">Open</property>
