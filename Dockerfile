@@ -17,6 +17,7 @@ RUN mkdir -p $NIFI_HOME
 RUN tar xfvz /tmp/nifi-bin.tar.gz -C $NIFI_HOME --strip-components=1
 
 ADD nifi.properties $NIFI_HOME/conf/nifi.properties
+ADD state-management.xml $NIFI_HOME/conf/state-management.xml
 ADD hdfs-site.xml $NIFI_HOME/conf/hdfs-site.xml
 ADD start-nifi.sh $NIFI_HOME/start-nifi.sh
 
