@@ -21,10 +21,11 @@ ADD state-management.xml $NIFI_HOME/conf/state-management.xml
 ADD hdfs-site.xml $NIFI_HOME/conf/hdfs-site.xml
 ADD start-nifi.sh $NIFI_HOME/start-nifi.sh
 
-VOLUME ["$NIFI_HOME/database_repository",   \
-        "$NIFI_HOME/flowfile_repository",   \
-        "$NIFI_HOME/content_repository",    \
-        "$NIFI_HOME/provenance_repository"]
+VOLUME ["/repos/templates",             \
+        "/repos/database_repository",   \
+        "/repos/flowfile_repository",   \
+        "/repos/content_repository",    \
+        "/repos/provenance_repository"]
 
 WORKDIR $NIFI_HOME
 EXPOSE 8080 8081 8082
